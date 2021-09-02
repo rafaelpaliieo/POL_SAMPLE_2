@@ -18,6 +18,10 @@ p {
   font-weight: 500;
 }
 
+img {
+  max-width: 100%;
+}
+
 .title-bar {
   margin-top: 40px;
   hr {
@@ -123,11 +127,11 @@ p {
   padding-top: 60px;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -200px;
   z-index: 2000;
   text-align: center;
   position: fixed;
-  display: none;
+  transition: $transition;
 
   .mobile-button-sidebar {
     border: none;
@@ -161,6 +165,11 @@ p {
       }
     }
   }
+}
+
+.sidebar-open {
+  right: 0;
+  transition: $transition;
 }
 
 .scrolled {

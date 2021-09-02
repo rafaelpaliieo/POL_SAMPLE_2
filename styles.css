@@ -16,6 +16,10 @@ p {
   font-weight: 500;
 }
 
+img {
+  max-width: 100%;
+}
+
 .title-bar {
   margin-top: 40px;
 }
@@ -123,11 +127,12 @@ p {
   padding-top: 60px;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -200px;
   z-index: 2000;
   text-align: center;
   position: fixed;
-  display: none;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
 }
 
 .side-bar .mobile-button-sidebar {
@@ -158,6 +163,12 @@ p {
 
 .side-bar ul li a button:hover hr {
   width: 100%;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+.sidebar-open {
+  right: 0;
   -webkit-transition: 0.2s ease-in-out all;
   transition: 0.2s ease-in-out all;
 }
