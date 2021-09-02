@@ -39,7 +39,7 @@ p {
   background-color: hsla(0, 0%, 100%, 0.8);
   height: 87px;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
   transition: $transition;
   title {
     text-align: left;
@@ -98,6 +98,67 @@ p {
     img {
       max-height: 50px;
       margin: 20px 0;
+    }
+  }
+}
+
+.mobile-background {
+  background: rgba(27, 31, 34, 0.3);
+  width: 100%;
+  display: block;
+  border: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1500;
+  position: fixed;
+  display: none;
+}
+
+.side-bar {
+  background: #fff;
+  height: 100vh;
+  width: 200px;
+  padding-top: 60px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+  text-align: center;
+  position: fixed;
+  display: none;
+
+  .mobile-button-sidebar {
+    border: none;
+    background: none;
+  }
+  ul {
+    margin-left: -40px;
+    li {
+      list-style: none;
+      margin-top: 15px;
+
+      a {
+        button {
+          background: transparent;
+          border: 0;
+          text-decoration: none;
+          outline: none;
+
+          hr {
+            border-top: 1px solid #000;
+            width: 0px;
+          }
+
+          &:hover {
+            hr {
+              width: 100%;
+              transition: $transition;
+            }
+          }
+        }
+      }
     }
   }
 }
